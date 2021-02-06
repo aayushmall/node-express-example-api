@@ -37,7 +37,7 @@ sequelize
 
     [1, 2, 3, 4, 5].forEach((index) => {
       orders.push({
-        type: "Sell",
+        type: `Sell${index}`,
         client_id: Math.floor(Math.random() * (10 - 1 + 1) + 1),
         amount: Math.floor(Math.random() * (10000 - 100 + 1) + 100),
         order_date: new Date()
@@ -46,7 +46,7 @@ sequelize
 
     [6, 7, 8, 9, 10].forEach((index) => {
       orders.push({
-        type: "Buy",
+        type: `Buy${index}`,
         client_id: Math.floor(Math.random() * (10 - 1 + 1) + 1),
         amount: Math.floor(Math.random() * (10000 - 100 + 1) + 100),
         order_date: new Date()
